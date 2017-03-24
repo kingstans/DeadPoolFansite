@@ -1,0 +1,195 @@
+@import url(reset.css);
+@import url(font.css);
+@import url(font-awesome.css);
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../assets/fonts/fontawesome-webfont.eot');
+  src: url('../assets/fonts/fontawesome-webfont.eot') format('embedded-opentype'),
+    url('../assets/fonts/fontawesome-webfont.woff') format('woff'),
+    url('../assets/fonts/fontawesome-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	font-family: 'roboto-bold',sans-serif;
+}
+
+#header {
+	background: #c2c2c2;
+	text-align: center;
+	margin: 10px;
+	padding: 15px;
+	border-radius: 10px;
+
+}
+.fixed {
+	position: fixed;
+	top: 15px;
+	background: rgba(255, 60, 60, .3);
+	border: 1px solid #000;
+	border-radius: 10px;
+	width: 100px;
+	height: 80px;
+}
+
+.fixed.logo {
+	background-image: 	url('http://orig14.deviantart.net/ac9d/f/2015/309/e/3/marvel_folder_icon_by_akathelast1-d9fndm7.png'), 
+						url('http://www.hixie.ch/resources/images/patterns/red-blobs');
+	background-repeat: no-repeat, repeat;
+	background-size: contain;
+	background-position: center center;
+	opacity: .7;
+
+}
+
+.nav {
+	text-align: center;
+	border-radius: 10px;
+	padding: 10px;
+	background: #ebebeb;
+}
+
+.nav a {
+	text-decoration: none; 
+	color: #000; 
+	display: inline-block; 
+}
+
+.content {
+	display: flex; 
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0 10px 10px;
+	font-family: 'roboto-bold',sans-serif;
+}
+
+.aside-wrap {
+	background: #ffffff;
+	width: 25%;
+	border: 3px solid #000;
+	border-radius: 10px;
+	overflow: hidden;
+
+}
+
+.aside-wrap	img {
+	display: block;
+	width: 100%;
+}
+
+.section {
+	background: #709f41;
+	text-align: center;
+	width: 45%;
+	padding:10px;
+	border-radius: 10px;
+}
+
+.icon {
+	display: block;
+	float: right;
+	font-size: 24px;
+
+}
+
+.article-item {
+	position: relative;
+	background: #ffffff;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.article-item .fa {
+	cursor: pointer;
+}
+
+.article-item:nth-child(even) {
+	background: #b8e6e3;
+	border-radius: 10px;
+}
+.article-item:last-of-type{  
+	margin-bottom: 0;
+}
+
+.title {
+    display: flex;
+    width: 97,5%;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    margin: 10px;
+    padding: 5px;
+    justify-content: center;
+  
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+ 	flex-wrap: wrap;
+  	justify-content: space-around;
+}
+  
+ .grid-item img {
+  	width: 200px;
+  	border-radius: 10px;
+  	margin-top: 10px;
+  	margin-bottom: 10px;
+   
+}
+
+.footer {
+	text-align: right;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+	background: #ebebeb;
+}
+
+.fa-chevron-up {
+	transition: .3s all ease;
+	position: fixed;
+	right:  20px;
+	bottom: 60px;
+	padding:  10px;
+	display: inline-block;
+	border-radius: 50%;
+	border: 1px solid #000;
+	background: rgba(255, 60, 60, .3);
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+	opacity: .7;
+}
+
+.fa-chevron-up:hover {
+	opacity: 1;
+	right: 20px;
+}
+/* condition */
+@media (max-width: 768px) {
+	/* body */
+
+	.content {
+		flex-direction: column;
+	}
+
+	.aside-wrap {
+		width: calc(100% - 6px);
+	}
+
+	.section {
+		width: calc(100% - 20px);
+	}
+
+	.container {
+		width: calc(100% - 5px);
+	}
+
+	.grid-item img {
+		width: calc(100% - 10px);
+		margin-left: 8px;
+	}
+}
